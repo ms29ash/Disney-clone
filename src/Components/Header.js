@@ -50,6 +50,7 @@ background:#090b13;
 display: flex;
 align-items: center;
 padding:0 36px;
+overflow-x:hidden;
 `;
 
 const Logo = Styled.img`
