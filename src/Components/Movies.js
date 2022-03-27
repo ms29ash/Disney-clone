@@ -1,35 +1,24 @@
 import React from 'react'
 import Styled from 'styled-components'
+import { selectMovies } from '../features/movie/moviesSlice'
+import { useSelector } from 'react-redux';
 
 function Movies() {
+
+    const movies = useSelector(selectMovies);
     return (
         <Container>
             <h4>Recommended for You</h4>
             <Content>
-                <Wrap>
-                    <img src="https://img1.hotstarext.com/image/upload/f_auto,t_web_hs_1x/sources/r1/cms/prod/5048/1125048-h-65913c2f20f8" alt="" />
-                </Wrap>
-                <Wrap>
-                    <img src="https://img1.hotstarext.com/image/upload/f_auto,t_web_hs_1x/sources/r1/cms/prod/5048/1125048-h-65913c2f20f8" alt="" />
-                </Wrap>
-                <Wrap>
-                    <img src="https://img1.hotstarext.com/image/upload/f_auto,t_web_hs_1x/sources/r1/cms/prod/5048/1125048-h-65913c2f20f8" alt="" />
-                </Wrap>
-                <Wrap>
-                    <img src="https://img1.hotstarext.com/image/upload/f_auto,t_web_hs_1x/sources/r1/cms/prod/5048/1125048-h-65913c2f20f8" alt="" />
-                </Wrap>
-                <Wrap>
-                    <img src="https://img1.hotstarext.com/image/upload/f_auto,t_web_hs_1x/sources/r1/cms/prod/5048/1125048-h-65913c2f20f8" alt="" />
-                </Wrap>
-                <Wrap>
-                    <img src="https://img1.hotstarext.com/image/upload/f_auto,t_web_hs_1x/sources/r1/cms/prod/5048/1125048-h-65913c2f20f8" alt="" />
-                </Wrap>
-                <Wrap>
-                    <img src="https://img1.hotstarext.com/image/upload/f_auto,t_web_hs_1x/sources/r1/cms/prod/5048/1125048-h-65913c2f20f8" alt="" />
-                </Wrap>
-                <Wrap>
-                    <img src="https://img1.hotstarext.com/image/upload/f_auto,t_web_hs_1x/sources/r1/cms/prod/5048/1125048-h-65913c2f20f8" alt="" />
-                </Wrap>
+                {movies &&
+                    movies.map((movie) => {
+                        return <Wrap key={movie.id}>
+                            <img src={movie.cardImg} alt="" />
+                        </Wrap>
+
+                    })}
+
+
 
             </Content>
         </Container>

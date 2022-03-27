@@ -18,7 +18,7 @@ function Home() {
             }
         });
         let tempMovies = await response.json();
-        dispatch(setMovies(tempMovies));
+        dispatch(setMovies(tempMovies.movies));
 
 
 
