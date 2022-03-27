@@ -38,6 +38,7 @@ export default ImageSlide
 const Carousel = Styled(Slider)`
 margin-top:20px;
 
+
 ul li button{
     &:before{
         font-size:10px;
