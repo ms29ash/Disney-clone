@@ -1,7 +1,14 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Styled from 'styled-components'
+import { useParams } from 'react-router-dom'
 
 function Detail() {
+    const { id } = useParams();
+
+    useEffect(() => {
+        //Grab the movie info from db
+
+    }, [])
     return (
         <Container>
             <Background>
