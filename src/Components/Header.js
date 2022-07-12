@@ -1,5 +1,6 @@
 import React from "react";
 import Styled from "styled-components";
+import { Link } from "react-router-dom";
 
 function Header() {
   return (
@@ -9,10 +10,10 @@ function Header() {
         alt=""
       />
       <NavMenu>
-        <a >
+        <LinkTo to='/' >
           <img src="/images/home-icon.svg" alt="" />
           <span>HOME</span>
-        </a>
+        </LinkTo>
         <a >
           <img src="/images/search-icon.svg" alt="" />
           <span>SEARCH</span>
@@ -106,3 +107,8 @@ border-radius: 100%;
 cursor:pointer;
 
 `;
+
+const LinkTo = Styled(Link)`
+color:white;
+text-decoration:none;
+`
